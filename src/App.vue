@@ -62,7 +62,8 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    flex-flow: column;
+    gap: 2rem;
   }
 
   .logo {
@@ -71,12 +72,15 @@ nav a:first-of-type {
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
+    place-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
 
   nav {
-    text-align: left;
+    text-align: center;
     margin-left: -1rem;
     font-size: 1rem;
 

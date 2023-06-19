@@ -30,7 +30,7 @@ a,
   #app {
     display: grid;
     grid-template-rows: 0.75fr 1fr;
-    padding: 0 2rem;
+    padding: 1.5rem 2rem;
     justify-items: center;
   }
 }

@@ -7,11 +7,7 @@ defineProps<{
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h3>
-      Classic Hair for the Modern Man.
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
-    </h3>
+    <h3>Classic Haircuts for the Modern Man.</h3>
   </div>
 </template>
 
@@ -33,7 +29,9 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  .greetings h1,
+  .greetings h1 {
+    text-align: center;
+  }
   .greetings h3 {
     text-align: left;
   }
