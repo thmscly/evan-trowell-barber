@@ -4,11 +4,12 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="header-wrapper">
+    <header>
+      <img alt="Coach's Barbershop logo" class="logo" src="@/assets/coach-logo.png" />
 
-    <div class="wrapper">
-      <HelloWorld msg="*Barbershop*" />
+      <!-- <div class="wrapper"> -->
+      <!-- <HelloWorld msg="*Barbershop*" /> -->
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -16,28 +17,40 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/socials">Socials</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
       </nav>
-    </div>
-  </header>
+      <!-- </div> -->
+    </header>
+  </div>
 
   <RouterView />
 </template>
 
 <style scoped>
+.header-wrapper {
+  background-color: rgba(0, 39, 66, 0.124);
+  padding: 5% 0;
+}
+
 header {
+  display: flex;
   line-height: 1.5;
   max-height: 100vh;
+  flex-direction: column;
+  place-items: center;
+  gap: 1.5rem;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0;
+  height: auto;
+  width: 50%;
+  filter: sepia(50%) grayscale(75%);
 }
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -59,15 +72,21 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
+  .header-wrapper {
     display: flex;
-    place-items: center;
-    flex-flow: column;
-    gap: 2rem;
+    justify-content: center;
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    padding: 9% 0;
+    background-color: rgb(0 51 87 / 65%);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  header {
+    display: flex;
+    max-height: 100vh;
+    flex-direction: row;
+    justify-content: center;
   }
 
   header .wrapper {
@@ -77,14 +96,17 @@ nav a:first-of-type {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    width: 50vw;
+  }
+
+  .logo {
+    width: 25%;
+    height: auto;
   }
 
   nav {
     text-align: center;
-    margin-left: -1rem;
     font-size: 1rem;
-
-    padding: 1rem 0;
     margin-top: 1rem;
   }
 }

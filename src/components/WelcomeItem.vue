@@ -17,6 +17,7 @@
   margin-top: 2rem;
   display: flex;
   position: relative;
+  align-items: center;
 }
 
 .details {
@@ -48,14 +49,17 @@ h3 {
   }
 
   i {
-    top: calc(50% - 25px);
-    left: -26px;
-    position: absolute;
+    position: relative;
     border: 1px solid var(--color-border);
     background: var(--color-background);
     border-radius: 8px;
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: 10rem;
+  }
+
+  i img {
+    height: 100%;
+    object-fit: fill;
   }
 
   .item:before {
