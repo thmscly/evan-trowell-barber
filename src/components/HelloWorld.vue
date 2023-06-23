@@ -7,7 +7,10 @@ defineProps<{
 <template>
   <div class="greetings">
     <img src="../assets/quiff.jpg" alt="" />
-    <h1 class="green">{{ msg }}</h1>
+    <div>
+      <h1 class="green">The Local Barber Shop</h1>
+      <p>{{ msg }}</p>
+    </div>
   </div>
 </template>
 
@@ -34,6 +37,7 @@ h3 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 5%;
   }
 
   .greetings img {

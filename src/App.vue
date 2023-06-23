@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
@@ -17,7 +16,9 @@ import HelloWorld from './components/HelloWorld.vue'
     </header>
   </div>
   <div class="wrapper">
-    <HelloWorld msg="Evan Trowell" />
+    <HelloWorld
+      msg="Evan Trowell, a Spring Hill native started The Local with nothing but scissors, know-how, and a vision. With 10 years of professional barber experience, he's taken his vision to a whole new level. The Local offers the best men's haircuts, women's haircuts, and hair styling for all in the greater Jacksonville, FL area."
+    />
   </div>
   <RouterView />
 </template>
@@ -77,7 +78,6 @@ nav a:first-of-type {
   .header-wrapper {
     display: flex;
     justify-content: center;
-    width: 100vw;
     margin: 0;
   }
 
@@ -98,7 +98,7 @@ nav a:first-of-type {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    width: 50vw;
+    width: 75vw;
     place-self: center;
   }
 

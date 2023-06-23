@@ -20,8 +20,6 @@ a,
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: center;
   }
 
   #app {
@@ -34,6 +32,9 @@ a,
 
 main {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 3rem;
+  flex-direction: row;
+  gap: 5%;
+  padding: 5%;
+  place-self: center;
+  background: linear-gradient(#141414b9, #1414144e);
 }
