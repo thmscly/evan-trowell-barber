@@ -5,18 +5,21 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+// import TheQuiff from '../assets/quiff.webp'
+// import TheBeard from '../assets/beard.jpeg'
 </script>
 
 <template>
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <img src="../assets/beard.jpg" alt="beard" style="object-fit: fill; height: 100%" />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>Who We Are</template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    Evan Trowell started *Barbershop* with nothing but scissors, know-how, and a vision. Now, with 6
+    experienced and licensed barbers under his wing, Evan's taken his vision to a whole new level.
+    Evan and his team are offering the best men's haircuts, women's haircuts, and hair styling for
+    all in the greater Jacksonville, FL area.
   </WelcomeItem>
 
   <WelcomeItem>
