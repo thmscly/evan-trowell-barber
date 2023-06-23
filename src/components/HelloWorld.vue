@@ -6,8 +6,8 @@ defineProps<{
 
 <template>
   <div class="greetings">
+    <img src="../assets/quiff.jpg" alt="" />
     <h1 class="green">{{ msg }}</h1>
-    <h3>Classic Haircuts for the Modern Man.</h3>
   </div>
 </template>
 
@@ -29,6 +29,17 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+  .greetings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .greetings img {
+    width: 40%;
+  }
+
   .greetings h1 {
     text-align: center;
   }

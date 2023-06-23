@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
@@ -6,28 +7,28 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div class="header-wrapper">
     <header>
-      <img alt="Coach's Barbershop logo" class="logo" src="@/assets/coach-logo.png" />
-
-      <!-- <div class="wrapper"> -->
-      <!-- <HelloWorld msg="*Barbershop*" /> -->
-
+      <img alt="Coach's Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.png" />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/socials">Socials</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
       </nav>
-      <!-- </div> -->
     </header>
   </div>
-
+  <div class="wrapper">
+    <HelloWorld msg="Evan Trowell" />
+  </div>
   <RouterView />
 </template>
 
 <style scoped>
 .header-wrapper {
-  background-color: rgba(0, 39, 66, 0.124);
-  padding: 5% 0;
+  background: linear-gradient(#141414b9 50%, #141414b9 50%),
+    url('./assets/barber-shop-decor-ideas.jpg') center no-repeat;
+  background-size: cover;
+  height: 35%;
+  position: relative;
 }
 
 header {
@@ -44,13 +45,14 @@ header {
   margin: 0;
   height: auto;
   width: 50%;
-  filter: sepia(50%) grayscale(75%);
+  filter: invert(100%) contrast(200%);
 }
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
+  color: white;
 }
 
 nav a.router-link-exact-active {
@@ -75,21 +77,21 @@ nav a:first-of-type {
   .header-wrapper {
     display: flex;
     justify-content: center;
-    height: 50vh;
     width: 100vw;
     margin: 0;
-    padding: 9% 0;
-    background-color: rgb(0 51 87 / 65%);
   }
 
   header {
     display: flex;
     max-height: 100vh;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    row-gap: 5%;
   }
 
-  header .wrapper {
+  .wrapper {
     display: flex;
     place-items: center;
     flex-direction: row;
@@ -97,6 +99,7 @@ nav a:first-of-type {
     align-content: center;
     justify-content: center;
     width: 50vw;
+    place-self: center;
   }
 
   .logo {
@@ -108,6 +111,11 @@ nav a:first-of-type {
     text-align: center;
     font-size: 1rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  nav a {
+    color: white;
   }
 }
 </style>

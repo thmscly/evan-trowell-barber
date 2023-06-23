@@ -25,9 +25,10 @@ a,
   }
 
   #app {
-    display: grid;
-    grid-template-rows: 0.75fr 1fr;
+    display: flex;
+    row-gap: 2rem;
     justify-items: center;
+    flex-direction: column;
   }
 }
 
