@@ -17,7 +17,8 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <div class="wrapper">
     <HelloWorld
-      msg="Evan Trowell, a Spring Hill native started The Local with nothing but scissors, know-how, and a vision. With 10 years of professional barber experience, he's taken his vision to a whole new level. The Local offers the best men's haircuts, women's haircuts, and hair styling for all in the greater Jacksonville, FL area."
+      msg="Evan Trowell, a Spring Hill native, started The Local with nothing but scissors, know-how, and a vision. With 10 years of professional barber experience, he's taken his vision to a whole new level. The Local offers the best men's haircuts, women's haircuts, and hair styling for all in the greater Jacksonville, FL area."
+      name="Local"
     />
   </div>
   <RouterView />
