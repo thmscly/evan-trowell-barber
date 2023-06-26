@@ -6,7 +6,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div class="header-wrapper">
     <header>
-      <img alt="Coach's Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.png" />
+      <img alt="The Local Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.png" />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -57,7 +57,9 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: white;
+  background-color: rgba(0, 60, 106, 0.565);
+  border-radius: 5%;
 }
 
 nav a.router-link-exact-active:hover {
@@ -66,8 +68,14 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 0.1rem 1rem;
   border-left: 1px solid var(--color-border);
+  margin: 0 0.1rem;
+  color: white;
+  background-color: rgb(162 162 162 / 48%);
+  border-radius: 5%;
+  text-shadow: rgba(0, 0, 0, 0.714) 0.0125rem 0.0125rem 0.1rem;
+  font-weight: 500;
 }
 
 nav a:first-of-type {
@@ -109,13 +117,17 @@ nav a:first-of-type {
 
   nav {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-shadow: rgba(0, 0, 0, 0.714) 0.0125rem 0.0125rem 0.1rem;
   }
+}
 
-  nav a {
-    color: white;
+@media (hover: hover) {
+  nav a:hover {
+    color: rgb(254, 168, 106);
+    background-color: rgba(240, 248, 255, 0.158);
   }
 }
 </style>

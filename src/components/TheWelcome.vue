@@ -21,7 +21,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+      <img src="../assets/womens-hair.png" alt="beard" style="object-fit: fill; height: 100%" />
     </template>
     <template #heading>Women's Haircuts</template>
     <p>
@@ -32,7 +32,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <img src="../assets/fancy_mustache.jpeg" alt="beard" style="object-fit: fill; height: 100%" />
     </template>
     <template #heading>Beard Trims</template>
     <p>

@@ -8,18 +8,27 @@
 a,
 .green {
   text-decoration: none;
-
   transition: 0.4s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  padding: 2.5%;
+  place-self: center;
+  background: linear-gradient(hsla(44, 100%, 20%, 0.79), #1414144e);
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: rgba(0, 137, 241, 0.391);
   }
 }
 
 @media (min-width: 1024px) {
-  body {
+  main {
+    flex-direction: row;
   }
 
   #app {
@@ -28,13 +37,4 @@ a,
     justify-items: center;
     flex-direction: column;
   }
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  gap: 5%;
-  padding: 5%;
-  place-self: center;
-  background: linear-gradient(#141414b9, #1414144e);
 }

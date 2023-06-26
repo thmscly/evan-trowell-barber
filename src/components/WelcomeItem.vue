@@ -4,9 +4,9 @@
       <slot name="icon"></slot>
     </i>
     <div class="details">
-      <h3>
+      <h2>
         <slot name="heading"></slot>
-      </h3>
+      </h2>
       <slot></slot>
     </div>
   </div>
@@ -19,6 +19,7 @@
   position: relative;
   align-items: center;
   color: whitesmoke;
+  text-align: center;
 }
 
 .details {
@@ -32,7 +33,6 @@ i {
   place-content: center;
   width: 32px;
   height: 32px;
-
   color: var(--color-text);
 }
 
@@ -49,6 +49,8 @@ h3 {
     display: flex;
     position: relative;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   i {
