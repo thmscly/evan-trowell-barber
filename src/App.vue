@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import IconFacebook from './components/icons/IconFacebook.vue';
 </script>
 
 <template>
@@ -22,6 +23,15 @@ import HelloWorld from './components/HelloWorld.vue'
     />
   </div>
   <RouterView />
+  <div>
+    <footer>
+      <nav id="footerNav">
+      <a href="tel:+">(123) 456-7890</a>
+      <a style="background: none;" href="http://" target="_blank" rel="noopener noreferrer"><IconFacebook /></a>
+      <a href="mailto:">email@internet.com</a>
+    </nav>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
@@ -57,6 +67,34 @@ nav {
   color: white;
 }
 
+footer {
+  display: flex;
+  line-height: 1.5;
+  max-height: 100vh;
+  flex-direction: column;
+  place-items: center;
+  gap: 1.5rem;
+}
+
+#footerNav {
+  display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#footerNav a {
+  display: inline-block;
+    padding: 0.1rem 1rem;
+    margin: 0 0.1rem;
+    color: white;
+    background-color: rgb(162 162 162 / 48%);
+    border-radius: 5%;
+    text-shadow: rgba(0, 0, 0, 0.714) 0.0125rem 0.0125rem 0.1rem;
+    font-weight: 500;
+}
+
 nav a.router-link-exact-active {
   color: white;
   background-color: rgba(0, 60, 106, 0.565);
@@ -70,7 +108,6 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0.1rem 1rem;
-  border-left: 1px solid var(--color-border);
   margin: 0 0.1rem;
   color: white;
   background-color: rgb(162 162 162 / 48%);
