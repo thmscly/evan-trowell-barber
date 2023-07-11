@@ -23,6 +23,7 @@ import IconFacebook from './components/icons/IconFacebook.vue';
     />
   </div>
   <RouterView />
+  <hr style="margin: 5% 0;">
   <div>
     <footer>
       <nav id="footerNav">
