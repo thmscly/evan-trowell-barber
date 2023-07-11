@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import IconFacebook from './components/icons/IconFacebook.vue';
 </script>
 
 <template>
   <div class="header-wrapper">
     <header>
-      <img alt="Coach's Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.png" />
+      <img alt="The Local Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.png" />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -17,9 +17,22 @@ import HelloWorld from './components/HelloWorld.vue'
     </header>
   </div>
   <div class="wrapper">
-    <HelloWorld msg="Evan Trowell" />
+    <HelloWorld
+      msg="Evan Trowell, a Spring Hill native, started The Local with nothing but scissors, know-how, and a vision. With 10 years of professional barber experience, he's taken his vision to a whole new level. The Local offers the best men's haircuts, women's haircuts, and hair styling for all in the greater Jacksonville, FL area."
+      name="Local"
+    />
   </div>
   <RouterView />
+  <hr style="margin: 5% 0;">
+  <div>
+    <footer>
+      <nav id="footerNav">
+      <a href="tel:+">(123) 456-7890</a>
+      <a style="background: none;" href="http://" target="_blank" rel="noopener noreferrer"><IconFacebook /></a>
+      <a href="mailto:">email@internet.com</a>
+    </nav>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
@@ -55,8 +68,38 @@ nav {
   color: white;
 }
 
+footer {
+  display: flex;
+  line-height: 1.5;
+  max-height: 100vh;
+  flex-direction: column;
+  place-items: center;
+  gap: 1.5rem;
+}
+
+#footerNav {
+  display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#footerNav a {
+  display: inline-block;
+    padding: 0.1rem 1rem;
+    margin: 0 0.1rem;
+    color: white;
+    background-color: rgb(162 162 162 / 48%);
+    border-radius: 5%;
+    text-shadow: rgba(0, 0, 0, 0.714) 0.0125rem 0.0125rem 0.1rem;
+    font-weight: 500;
+}
+
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: white;
+  background-color: rgba(0, 60, 106, 0.565);
+  border-radius: 5%;
 }
 
 nav a.router-link-exact-active:hover {
@@ -65,8 +108,13 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  padding: 0.1rem 1rem;
+  margin: 0 0.1rem;
+  color: white;
+  background-color: rgb(162 162 162 / 48%);
+  border-radius: 5%;
+  text-shadow: rgba(0, 0, 0, 0.714) 0.0125rem 0.0125rem 0.1rem;
+  font-weight: 500;
 }
 
 nav a:first-of-type {
@@ -77,7 +125,6 @@ nav a:first-of-type {
   .header-wrapper {
     display: flex;
     justify-content: center;
-    width: 100vw;
     margin: 0;
   }
 
@@ -98,7 +145,7 @@ nav a:first-of-type {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    width: 50vw;
+    width: 75vw;
     place-self: center;
   }
 
@@ -109,13 +156,17 @@ nav a:first-of-type {
 
   nav {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-shadow: rgba(0, 0, 0, 0.714) 0.0125rem 0.0125rem 0.1rem;
   }
+}
 
-  nav a {
-    color: white;
+@media (hover: hover) {
+  nav a:hover {
+    color: rgb(254, 168, 106);
+    background-color: rgba(240, 248, 255, 0.158);
   }
 }
 </style>

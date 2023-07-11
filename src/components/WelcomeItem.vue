@@ -4,9 +4,9 @@
       <slot name="icon"></slot>
     </i>
     <div class="details">
-      <h3>
+      <h2>
         <slot name="heading"></slot>
-      </h3>
+      </h2>
       <slot></slot>
     </div>
   </div>
@@ -15,9 +15,12 @@
 <style scoped>
 .item {
   margin-top: 2rem;
-  display: flex;
-  position: relative;
-  align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    text-align: center;
+    flex-direction: column;
 }
 
 .details {
@@ -29,23 +32,27 @@ i {
   display: flex;
   place-items: center;
   place-content: center;
-  width: 32px;
-  height: 32px;
-
+  width: 100px;
+  height: 100px;
   color: var(--color-text);
+  place-self: center;
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
-  color: var(--color-heading);
+  color: whitesmoke;
 }
 
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   i {
