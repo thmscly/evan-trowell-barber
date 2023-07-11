@@ -16,7 +16,7 @@ const nameClass = ref('name')
         Be a <span :class="nameClass">{{ name }}</span
         >.
       </h1>
-      <p>{{ msg }}</p>
+      <p id="introPara">{{ msg }}</p>
     </div>
   </div>
 </template>
@@ -49,6 +49,10 @@ h3 {
 .greetings h1,
 .greetings h3 {
   text-align: center;
+}
+
+#introPara {
+  padding: 0 1.5rem;
 }
 
 @media (min-width: 1024px) {

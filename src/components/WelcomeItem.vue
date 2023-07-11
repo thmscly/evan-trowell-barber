@@ -15,11 +15,12 @@
 <style scoped>
 .item {
   margin-top: 2rem;
-  display: flex;
-  position: relative;
-  align-items: center;
-  color: whitesmoke;
-  text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    text-align: center;
+    flex-direction: column;
 }
 
 .details {
@@ -31,9 +32,10 @@ i {
   display: flex;
   place-items: center;
   place-content: center;
-  width: 32px;
-  height: 32px;
+  width: 100px;
+  height: 100px;
   color: var(--color-text);
+  place-self: center;
 }
 
 h3 {
