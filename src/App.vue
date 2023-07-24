@@ -54,10 +54,8 @@ header {
 }
 
 .logo {
-  display: block;
-  margin: 0;
-  height: auto;
-  width: 50%;
+  width: 400px;
+  max-width: 90%;
   filter: invert(100%) contrast(200%);
 }
 
@@ -149,10 +147,10 @@ nav a:first-of-type {
     place-self: center;
   }
 
-  .logo {
+  /* .logo {
     width: 25%;
     height: auto;
-  }
+  } */
 
   nav {
     text-align: center;
