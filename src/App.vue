@@ -7,7 +7,7 @@ import IconFacebook from './components/icons/IconFacebook.vue';
 <template>
   <div class="header-wrapper">
     <header>
-      <img alt="The Local Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.png" />
+      <img alt="The Local Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.webp" />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
