@@ -7,7 +7,7 @@ import IconFacebook from './components/icons/IconFacebook.vue';
 <template>
   <div class="header-wrapper">
     <header>
-      <img alt="The Local Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.png" />
+      <img alt="The Local Barbershop logo" class="logo" src="@/assets/local-barber-shop-logo.webp" />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -54,10 +54,8 @@ header {
 }
 
 .logo {
-  display: block;
-  margin: 0;
-  height: auto;
-  width: 50%;
+  width: 400px;
+  max-width: 90%;
   filter: invert(100%) contrast(200%);
 }
 
@@ -149,10 +147,10 @@ nav a:first-of-type {
     place-self: center;
   }
 
-  .logo {
+  /* .logo {
     width: 25%;
     height: auto;
-  }
+  } */
 
   nav {
     text-align: center;
